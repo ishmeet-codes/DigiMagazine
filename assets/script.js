@@ -105,3 +105,66 @@ document.getElementById('prevButton').addEventListener('click', function() {
     let currentNumber = parseInt(document.getElementById('currentFileNumber').textContent);
     changePage(currentNumber - 1);
 });
+
+// Image zoom feature
+
+$(document).ready(function() {
+        let originalX = 50; // Original width in vw
+        let originalY = originalX * 1.414; // Original height in vw
+        let zoom = 100; // Initial zoom percentage
+
+       
+
+        function updateBoxSize() {
+            let newX = (originalX * zoom) / 100; // Adjusted width based on zoom
+            let newY = newX * 1.414; // Adjusted height based on new width
+            $('#page-content').css({
+                width: newX + 'vw',
+                height: newY + 'vw'
+            });
+        }
+
+        // Zoom In button
+        $('#zoomInBtn').click(function() {
+            zoom += 10; // Increase zoom by 10%
+            
+            updateBoxSize();
+        });
+
+        // Zoom Out button
+        $('#zoomOutBtn').click(function() {
+            zoom = Math.max(10, zoom - 10); // Decrease zoom by 10%, minimum is 10%
+            updateBoxSize();
+        });
+
+        // Reset button
+        $('#resetBtn').click(function() {
+            zoom = 100; // Reset zoom to 100%
+            
+            updateBoxSize();
+        });
+
+        // Dropdown for predefined zoom options
+        $('#zoomDropdown').change(function() {
+            zoom = parseInt($(this).val()); // Get selected value from dropdown
+            
+            updateBoxSize();
+        });
+
+        // Disable Ctrl + '+' and Ctrl + '-' for zooming in and out
+        $(document).keydown(function(e) {
+            if (e.ctrlKey && (e.key === '+' || e.key === '=' || e.key === '-')) {
+                e.preventDefault(); // Disable default browser zoom action
+            }
+        });
+
+        // Disable zoom with Ctrl + mouse scroll
+        window.addEventListener('wheel', function(e) {
+            if (e.ctrlKey) {
+                e.preventDefault(); // Prevent the default zoom behavior
+            }
+        }, { passive: false }); // passive: false allows e.preventDefault() in wheel event
+
+        
+        updateBoxSize(); // Set initial box size
+    });
