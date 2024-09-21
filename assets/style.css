@@ -4,6 +4,99 @@ body {
   margin: 0px;
   padding: 0px
 }
+/* HEADER CSS BEGINS*/
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px;
+  margin-left: 0;
+  margin-right: 0;
+  box-sizing: border-box;
+  background-color: #4D376D;
+  padding: 5px;
+}
+.link {
+  text-decoration: none;
+}
+.logo-gndec {
+  width: 100px;
+  height: 100px;
+  margin-right: 10px;
+}
+.name {
+  font-size: 2.5vw;
+  font-weight: bold;
+  color: #B9ADCF;
+  font-family: 'Times New Roman', Times, serif;
+  margin: auto;
+}
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #B9ADCF;
+  color: #4D376D;
+  padding: 8px 9px;
+  border-radius: 9px;
+  border: none;
+}
+.openbtn:hover {
+  background-color: #B9ADCF;
+}
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+/* HEADER CSS ENDS*/
+
+/* FOOTER CSS BEGINS*/
+.page0 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2px;
+}
+.page0 button {
+  padding: 2px 20px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+.page0 span {
+  display: flex;
+}
+.page0 span button {
+  background-color: rgb(12, 12, 12);
+  border: 1px solid #ddd;
+  margin: 0 2px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.page0 span button.active {
+  background-color: #4caf50;
+  color: white;
+}
+#pagination {
+  margin: 20px 0; /* Space around the pagination */
+}
+.credit {
+  float: right;
+  margin: 15px;
+}
+/* FOOTER CSS ENDS*/
+.pgnum {
+  border: #4D376D 1px solid;
+  border-radius: 25px;
+  padding: 2px;
+  margin: 9px;
+  width: 174px;
+  display: block;
+  position: absolute;
+  left:40%;
+  transform: translate (-50%, -50%) ;
+  background-color: #4D376D;
+  color: #B9ADCF;
+}
 
 .sidebar {
   height: 80svh;
@@ -45,52 +138,10 @@ body {
   margin-left: 50px;
 }
 
-.openbtn {
-  font-size: 20px;
-  cursor: pointer;
-  background-color: #B9ADCF;
-  color: #4D376D;
-  padding: 8px 9px;
-  border-radius: 9px;
-  border: none;
+.ampp{
+  width: 90px;
+  height: 120px;
 }
-
-.openbtn:hover {
-  background-color: #B9ADCF;
-}
-
-.link{
-  text-decoration: none;
-}
-#main {
-  transition: margin-left .5s;
-  padding: 16px;
-}
-
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0px;
-    margin-left: 0;
-    margin-right: 0;
-    box-sizing: border-box;
-    background-color: #4D376D;
-    padding: 5px;
-  }
-.logo-gndec {
-    width: 100px;
-    height: 100px;
-    margin-right: 10px;
-  }
-  .name {
-    font-size: 2.5vw;
-    font-weight: bold;
-    color: #B9ADCF;
-    font-family: 'Times New Roman', Times, serif;
-    margin: auto;
-  }
   .menu {
     display: flex;
     justify-content: center;
@@ -101,78 +152,40 @@ header {
     border: 2px double blueviolet;
     border-radius: 19px;
   }
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-  .sidebar {padding-top: 15px;
-    overflow-y: scroll;}
-  .sidebar a {font-size: 18px;}
-  .logo-gndec {
-    width: 50px;
-    height: 50px;
-    margin-right: 10px;
-  }
-  .name {
-    font-size: 1.5vw;
-  }
 
-}
 .maincontent {
-  display: flex;
+  display: inline-block;
   justify-content: center;
   align-items: center;
   align-self: center;
-   border: 10px solid black;
-   margin-left: 40%;
+  border: 10px solid black;
+  margin-top: 100px;
+  
 }
 #image-container{
   display: inline;
 }
-.page0 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 2px;
-}
-.page0 button {
-  padding: 2px 20px;
-  margin: 0 5px;
-  cursor: pointer;
-}
-.page0 span {
-  display: flex;
-}
-.page0 span button {
-  background-color: rgb(12, 12, 12);
-  border: 1px solid #ddd;
-  margin: 0 2px;
-  padding: 5px 10px;
-  cursor: pointer;
-}
-.page0 span button.active {
-  background-color: #4caf50;
-  color: white;
-}
+
 /* CSS styles for responsiveness */
 #image-container {
-  max-width: 100vw; /* Container takes up full width */
-  overflow: hidden; /* Hide any overflow */
-  text-align: center; /* Center the image */
+  max-width: 100vw; 
+  overflow: hidden;
+  text-align: center;
   z-index: -1;
-  margin-left: 100px;
+  
  
 }
 #page-content {
-  max-width: 100vw; /* Image width will not exceed the container's width */
-  height: 80vh; /* Maintain aspect ratio */
+  max-width: 50vw;  
+  aspect-ratio: 1/1.414;
+ 
 }
 /* Optional: Style for pagination buttons */
-#pagination {
-  margin: 20px 0; /* Space around the pagination */
-}
+
 button {
-  margin: 0 5px; /* Space between buttons */
-  padding: 10px 15px; /* Button padding */
-  font-size: 16px; /* Font size for buttons */
+  margin: 0 5px;
+  padding: 10px 15px;
+  font-size: 16px;
   border: 2px solid darkviolet;
   border-radius: 9px;
   top: 45vw;    
@@ -180,7 +193,8 @@ button {
 .btn1 {
 font-size: 1vw !important;
 color: #000;
-display: inline-block;
+display: block;
+float: left;
 background-color: transparent !important ;
 position:absolute ;
 top: 50%;
@@ -202,9 +216,11 @@ top: 50%;
   font-size: 1vw !important;
   color: #000;
   display: inline;
+  align-items: end;
+  float: right;
   background-color: transparent !important ;
   position: absolute;
-  top: 50%; 
+  top: 60%; 
   }
 .bar1 {
   background-color: #4caf50;
@@ -214,12 +230,14 @@ top: 50%;
 }
 
 
-.credit {
-  float: right;
-  margin: 15px;
-}
 
-/* CSS for credit.html */
+
+
+
+
+
+
+/* CREDITS CSS BEGINS */
 .cbody {
   background-color: aliceblue;
 }
@@ -266,7 +284,6 @@ top: 50%;
   margin: 2%;
   padding: 6px;
 }
-
 .cd1 {
   z-index: 2;
   color: white;
@@ -313,8 +330,13 @@ top: 50%;
   animation: rotBGimg 3.5s linear infinite;
 } */
 
+/* CREDITS CSS ENDS */
 
-/* CSS for documentation */
+
+
+
+
+/* DOCUMENTATION CSS BEGINS */
 .docbody{
   background-color: aliceblue;
   color: slategray;
@@ -329,3 +351,21 @@ top: 50%;
   text-decoration: none;
   color: slategray;
 }
+/*  DOCUMENTATION CSS ENDS */
+
+/* INDEX MEDIA QUERY BEGINS */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;
+    overflow-y: scroll;}
+  .sidebar a {font-size: 18px;}
+  .logo-gndec {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+  }
+  .name {
+    font-size: 1.5vw;
+  }
+
+}
+/* INDEX MEDIA QUERY ENDS */
