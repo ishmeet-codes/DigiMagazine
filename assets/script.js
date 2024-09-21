@@ -1,11 +1,14 @@
+document.getElementById("maincontent").style.width = "96%";
+document.getElementById("maincontent").style.display= 'flex';
 function openNav() {
     document.getElementById("mySidebar").style.width = "20%";
-    document.getElementById("mainContent").style.marginLeft = "80%";
+    document.getElementById("maincontent").style.width = "79%";
   }
   
   function closeNav() {
     document.getElementById("mySidebar").style.width = "0%";
-    document.getElementById("mainContent").style.marginLeft= "100%";
+    document.getElementById("maincontent").style.width = "96%";
+    document.getElementById("maincontent").style.display= 'flex';
   }
 
   const totalImages = 132; // Total number of images
