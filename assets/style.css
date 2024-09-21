@@ -316,8 +316,8 @@ top: 50%;
 
 /* CSS for documentation */
 .docbody{
-  background-color: #4D376D;
-  color: peachpuff;
+  background-color: aliceblue;
+  color: slategray;
 }
 .listd1 {
   font-size: larger;
@@ -327,5 +327,5 @@ top: 50%;
 }
 .dclink {
   text-decoration: none;
-  color: peachpuff;
+  color: slategray;
 }
