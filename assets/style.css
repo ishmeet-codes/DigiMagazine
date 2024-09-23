@@ -1,0 +1,447 @@
+body {
+  font-family: "Lato", sans-serif;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px
+}
+/* HEADER CSS BEGINS*/
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px;
+  margin-left: 0;
+  margin-right: 0;
+  box-sizing: border-box;
+  background-color: #4D376D;
+  padding: 5px;
+}
+.link {
+  text-decoration: none;
+}
+.logo-gndec {
+  width: 100px;
+  height: 100px;
+  margin-right: 10px;
+}
+.name {
+  font-size: 2.5vw;
+  font-weight: bold;
+  color: #B9ADCF;
+  font-family: 'Times New Roman', Times, serif;
+  margin: auto;
+}
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #B9ADCF;
+  color: #4D376D;
+  padding: 8px 9px;
+  border-radius: 9px;
+  border: none;
+}
+.openbtn:hover {
+  background-color: #B9ADCF;
+}
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+/* HEADER CSS ENDS*/
+
+/* FOOTER CSS BEGINS*/
+.page0 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2px;
+}
+.page0 button {
+  padding: 2px 20px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+.page0 span {
+  display: flex;
+}
+.page0 span button {
+  background-color: rgb(12, 12, 12);
+  border: 1px solid #ddd;
+  margin: 0 2px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.page0 span button.active {
+  background-color: #4caf50;
+  color: white;
+}
+#pagination {
+  margin: 20px 0; /* Space around the pagination */
+}
+.credit {
+  float: right;
+  margin: 15px;
+}
+/* FOOTER CSS ENDS*/
+
+/* SECTION 1 CSS ENDS*/
+.pgnum {
+  border: #4D376D 1px solid;
+  border-radius: 25px;
+  padding: 2px;
+  margin: 9px;
+  width: 190px;
+  display: inline-flex;
+  position: absolute;
+  left:40%;
+  transform: translate (-50%, -50%) ;
+  background-color: #4D376D;
+  color: #B9ADCF;
+}
+.wrapper {
+  display: inline-flex;
+  list-style: none;
+  height: 120px;
+  width: 20vw;
+  padding-top: 40px;
+  font-family: "Poppins", sans-serif;
+  justify-content: center;
+}
+
+.wrapper .icon {
+  position: relative;
+  background: #fff;
+  z-index: 0;
+  border-radius: 50%;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  z-index: -1;
+  border-radius: 50%;
+  top: 100%;
+}
+.wrapper .icon:hover:after {
+  animation: bg-pos 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55) 1 both;
+  animation-timing-function: ease-in-out;
+}
+
+.wrapper .icon:hover {
+  color: #fff;
+  overflow: unset;
+  transition: color 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  animation: overflow-toggle 0.7s;
+}
+
+
+@keyframes bg-pos {
+  0% {
+    top: 100%;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+@keyframes overflow-toggle {
+  0% {
+    overflow: hidden;
+  }
+  100% {
+    overflow: visible;
+  }
+}
+
+.icj {
+    color: blueviolet;
+    background-color: transparent;
+}
+
+/* SECTION 1 CSS ENDS*/
+.sidebar {
+  height: 80svh;
+  width:0;
+  position: fixed;
+  z-index: 1;
+  top:100px;
+  right: 0;
+  color: #4D376D;
+  background-color: #B9ADCF;
+  overflow-x: hidden;
+  transition: 0.5s;
+  overflow-y: scroll;
+  padding-top: 60px;
+  
+}
+.tcbutn {
+  background-color: transparent;
+  border:none ;
+}
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #4D376D;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.ampp{
+  width: 90px;
+  height: 120px;
+}
+  .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 5px;
+    font-weight: bold;
+    font: 1rem sans-serif;
+    border: 2px double blueviolet;
+    border-radius: 19px;
+  }
+
+.maincontent {
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  border: 1px solid transparent;
+  margin-top: 10px;
+  
+}
+#image-container{
+  display: inline;
+}
+
+/* CSS styles for responsiveness */
+#image-container {
+  min-width: 100vw; 
+  overflow: hidden;
+  text-align: center;
+  z-index: -1;
+  
+}
+#page-content {
+  width: 50vw;  
+  aspect-ratio: 1/1.414;
+}
+/* Optional: Style for pagination buttons */
+
+button {
+  margin: 0 5px;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 2px solid darkviolet;
+  border-radius: 9px;
+  top: 45vw;    
+}  
+.btn1 {
+font-size: 1vw !important;
+color: #000;
+display: block;
+float: left;
+background-color: transparent !important ;
+position:absolute ;
+top: 50%;
+}
+#nextButton {
+  background-color: transparent;
+  right: 10px;
+  backdrop-filter: blur(10px);
+  font-style: oblique;
+  font-weight: bold;
+}
+#prevButton {
+  background-color: transparent;
+  backdrop-filter: blur(2px);
+  font-style: oblique;
+  font-weight: bold;
+}
+.btn2 {
+  font-size: 1vw !important;
+  color: #000;
+  display: inline;
+  align-items: end;
+  float: right;
+  background-color: transparent !important ;
+  position: absolute;
+  top: 60%; 
+  }
+.bar1 {
+  background-color: #4caf50;
+}
+.bar2 {
+  background-color: aquamarine;
+}
+
+
+
+
+
+
+
+
+
+/* CREDITS CSS BEGINS */
+.cbody {
+  background-color: aliceblue;
+}
+.cch {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-style: oblique;
+  font-weight: bolder;
+  font-size: 4em;
+  text-align: center;
+  color: burlywood;
+}
+.creditpage {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.clink{
+  color: grey;
+}
+.ccimage {
+  width: 100%;
+  height: 390px;
+}
+.title1 {
+  color: grey;
+  font-size: 18px;
+}
+.link1 {
+  text-decoration: none;
+  font-size: 22px;
+  color: grey;
+  margin: 9px;
+}
+.card2 {
+  width: 300px;
+  height: auto;
+  background: #07182E;
+  position: relative;
+  display: flex;
+  place-content: center;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 20px;
+  margin: 2%;
+  padding: 6px;
+}
+.cd1 {
+  z-index: 2;
+  color: white;
+  font-size: 1rem;
+}
+.cimg {
+  margin: 1.9%;
+  border-radius: 20px;
+  
+}
+.card2::before {
+  content: '';
+  position: absolute;
+  width: 100px;
+  background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255));
+  height: 130%;
+  animation: rotBGimg 3s linear infinite;
+  transition: all 0.2s linear;
+}
+
+@keyframes rotBGimg {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.card2::after {
+  content: '';
+  position: absolute;
+  background: #07182E;
+  inset: 5px;
+  border-radius: 15px;
+} 
+
+@media screen and (max-width: 860px) {
+  .creditpage {flex-direction:column;}
+}
+/* .card:hover:before {
+  background-image: linear-gradient(180deg, rgb(81, 255, 0), purple);
+  animation: rotBGimg 3.5s linear infinite;
+} */
+
+/* CREDITS CSS ENDS */
+
+
+
+
+
+/* DOCUMENTATION CSS BEGINS */
+.docbody{
+  background-color: aliceblue;
+  color: slategray;
+}
+.listd1 {
+  font-size: larger;
+  font-weight: bolder;
+  font-family: 'Times New Roman', Times, serif;
+  font-style: oblique;
+}
+.dclink {
+  text-decoration: none;
+  color: slategray;
+}
+/*  DOCUMENTATION CSS ENDS */
+
+/* INDEX MEDIA QUERY BEGINS */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;
+    overflow-y: scroll;}
+  .sidebar a {font-size: 18px;}
+  .logo-gndec {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+  }
+  .name {
+    font-size: 1.5vw;
+  }
+
+}
+/* INDEX MEDIA QUERY ENDS */
